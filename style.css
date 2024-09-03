@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+html {
+	height: 100%;
+	width: 100%;
+	box-sizing: border-box;
+	outline: 0px;
+	-webkit-user-select:none;  
+		-moz-user-select:none;     
+		-ms-user-select:none;      
+		user-select:none; 
+}
+
+* {
+	font-family: 'Great Vibes', cursive;
+	margin: 0;
+}
+
+body {
+	background-color: #ffb3c9;
+}
+
+div a{
+	display: none; /* Apenas para o WebHost não aparecer */
+}
+
+iframe{
+	width: 640px; 
+	height: 480px;
+}
+
+li {
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+	color: #ff4da3;
+}
+
+html, body {
+		overflow-x: hidden;
+}
+
+/* index */
+
+#menu {
+	margin-top: 50px;
+	margin-bottom: 20px;
+}
+
+#menu ul li {
+	display: inline;
+	position: relative;
+}
+
+#menu ul li a {
+		display: inline-block;
+		text-decoration: none;
+		padding-right: 30px;
+		font-size: 300%;
+		cursor: pointer;
+		position: relative; /* Adiciona posição relativa para que o ::before seja posicionado corretamente */
+}
+
+#menu ul li a:hover{
+	color: #c84182;
+}
+
+#menu ul li a::before {
+		content: "";
+		position: absolute;
+		bottom: 0; /* Alinha o ::before na parte inferior */
+		left: 50%; /* Começa no meio */
+		width: 0; /* Começa com largura 0 */
+		height: 1px; /* Altura da borda */
+		background-color: #c84182; /* Cor da borda */
+		transition: width .5s ease, left .5s ease; /* Adiciona transições para largura e posição */
+}
+
+#menu ul li a:hover::before {
+		width: 100%; /* Largura total */
+		left: 0; /* Alinha à esquerda */
+}
+
+.header-content {
+	margin-top: 0px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header-text {
+	margin-top: 50px;
+	margin-left: 50px;
+	width: 25%;
+	word-wrap: break-word;
+	font-size: 150%;
+	display: block;
+}
+
+.header-logo {
+	display: flex;
+	;
+	width: 700px;
+	height: 400px;
+}
+
+.header-logo img {
+	width: 100%;
+	height: 100%;
+}
+
+.header-text p,
+span {
+	font-family: "Bebas Neue", sans-serif;
+	font-weight: 400;
+	font-size: 150%;
+	color: white;
+}
+
+#pensador {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: 400;
+	font-size: 80%;
+	color: #b6497e;
+}
+
+#love {
+	font-family: "Bebas Neue", sans-serif;
+	font-weight: 400;
+	font-size: 160%;
+	color: #b6497e;
+	margin-top: 10px;
+}
+
+#love2 {
+	color: red;
+	font-size: 130%;
+	animation: pulse .6s infinite alternate !important;
+}
+
+#cor {
+	color: #ff4da3;
+}
+
+span {
+	color: red;
+}
+
+footer {
+	width: 100%;
+	padding: 5px;
+	margin-top: 50px;
+	text-align: center;
+	font-size: 200%;
+	color: #f9bece;
+	background-color: #ff4da3;
+	font-family: "Bebas Neue", sans-serif;
+}
+
+#font-up{
+	font-size: 200%;
+	-webkit-text-stroke-width: 1.9px;
+		-webkit-text-stroke-color: black;
+}
+
+#pulse {
+	animation: pulse .6s infinite alternate !important;
+}
+
+@keyframes pulse {
+	0% {
+		color: red;
+		-webkit-text-stroke-width: 1px;
+			-webkit-text-stroke-color: red;
+/*		transform: scale(1.2); Não funciona*/
+	}
+	25% {
+		color: red;
+		-webkit-text-stroke-width: 2px;
+			-webkit-text-stroke-color: red;
+/*		transform: scale(1.2); Não funciona*/
+	}
+	50% {
+		color: red;
+		-webkit-text-stroke-width: 3px;
+			-webkit-text-stroke-color: red;
+/*		transform: scale(1.2); Não funciona*/
+	}
+	100% {
+		color: red;
+		-webkit-text-stroke-width: 4px;
+			-webkit-text-stroke-color: red;
+/*		transform: scale(1.2); Não funciona*/
+	}
+}
+
+@media screen and (max-width: 768px) {
+
+	.header-text {
+		margin-left: 20px;
+		width: 50%;
+		word-wrap: break-word;
+		font-size: 150%;
+	}
+
+	#font-up{
+	font-size: 150%;
+}
+
+	#menu ul li a {
+		display: inline-block;
+		text-decoration: none;
+		padding-right: 20px;
+		font-size: 200%;
+		cursor: pointer;
+	}
+
+	.header-logo {
+		display: flex;
+		;
+		width: 40%;
+		height: 200px;
+	}
+
+	.header-text p {
+		font-size: 100%;
+		color: white;
+	}
+
+	#pensador{
+		font-size: 70%;
+	}
+
+	#love{
+		font-size: 70%;
+	}
+
+	footer {
+		width: 100%;
+		padding: 5px;
+		margin-top: 50px;
+		text-align: center;
+		font-size: 100%;
+		color: white;
+		background-color: #ff4da3;
+	}
+}
+
+
+
+/* historia */
+
+#footer-history {
+	width: 100%;
+	padding: 5px;
+	margin-top: 50px;
+	text-align: center;
+	font-size: 200%;
+	color: white;
+	background-color: #ff4da3;
+}
+
+.book-page {
+		width: 80%;
+		margin: 50px auto;
+		padding: 20px;
+		background-color: #f7e2bb; /* Cor de fundo para simular papel amarelado */
+		border: 1px solid #ccc; /* Borda cinza */
+		box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+.page-content {
+		text-align: justify;
+		line-height: 1.6;
+}
+
+.page-content h1 {
+	font-family: "Times New Roman", Times, serif;
+	margin-top: 50px;
+		text-align: center;
+		font-size: 2.5rem;
+		margin-bottom: 20px;
+}
+
+.page-content p {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 110%;
+		margin-bottom: 10px;
+}
+
+/* momentos */
+
+#footer-moments {
+	width: 100%;
+	padding: 5px;
+	margin-top: 50px;
+	text-align: center;
+	font-size: 200%;
+	color: white;
+	background-color: #ff4da3;
+}
+
+#header-moments {
+	margin-top: 120px;
+	height: 150px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#header-moments h1 {
+	width: 100%;
+	text-align: center;
+	font-family: "Bebas Neue", sans-serif;
+	font-size: 4rem;
+	font-weight: 400;
+	color: white;
+}
+
+.gallery-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	gap: 1vw;
+	padding: 0 2vw;
+}
+
+.gallery-items {
+	display: flex;
+	width: 340px;
+	height: 340px;
+	border: 10px solid white;
+	box-shadow: 5px 5px 5px #212121;
+	flex-grow: 1;
+	transition: transform .2s linear;
+}
+
+.gallery-items:hover {
+	transform: scale(1.1);
+}
+
+.gallery-items img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+
+	.gallery-items {
+		margin: 10px;
+		width: 300px;
+		height: 300px;
+		border: 7px solid white;
+		box-shadow: 5px 5px 5px #212121;
+		flex-grow: 1;
+		transition: transform .2s linear;
+	}
+
+	#footer-moments {
+		width: 100%;
+		padding: 5px;
+		margin-top: 50px;
+		margin-bottom: 50px;
+		text-align: center;
+		font-size: 100%;
+		color: white;
+		background-color: #ff4da3;
+	}
+
+}
